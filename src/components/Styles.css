@@ -1,0 +1,64 @@
+/** Table **/
+.table {
+  width: 100%;
+}
+
+.table th {
+  padding-left: 15px;
+  text-align: start;
+  background-color: #deeaf6;
+}
+
+.table td {
+  padding-left: 15px;
+}
+
+/** Form **/
+.form {
+  display: flex;
+}
+
+.inputSection {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding-top: 20px;
+}
+
+.inputSection label {
+  padding: 12px 20px;
+  margin: 20px 10px;
+}
+
+.inputSection input,
+select {
+  padding: 5px 20px;
+  margin: 20px 0;
+  border: 2px solid #5b9bd5;
+  border-radius: 4px;
+}
+
+.submit {
+  align-items: flex-end;
+}
+.action {
+  display: flex;
+  flex: 1;
+  margin-top: 20px;
+  align-items: flex-start;
+  margin-left: 35px;
+}
+
+.action input {
+  background-color: #5b9bd5;
+  padding: 14px 20px;
+  margin: 20px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.action input:hover {
+  background-color: #ffc000;
+}

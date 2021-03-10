@@ -1,0 +1,66 @@
+{
+  "wallets": [
+    {
+      "id": 1,
+      "userId": "User 1",
+      "userName": "Name 1",
+      "phone": "9090909090",
+      "balance": 100,
+      "transactions": [
+        {
+          "id": 1,
+          "type": "DEBIT",
+          "amount": 10,
+          "balance": 100,
+          "timestamp": 1615331341387
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "userId": "User 2",
+      "userName": "Name 2",
+      "phone": "9090909091",
+      "balance": 200.90,
+      "transactions": [
+        {
+          "id": 1,
+          "type": "CREDIT",
+          "amount": 10,
+          "balance": 200.90,
+          "timestamp": 1615191341387
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "userId": "User 3",
+      "userName": "Name 3",
+      "phone": "9090909092",
+      "balance": 300,
+      "transactions": [
+        {
+          "id": 1,
+          "type": "DEBIT",
+          "amount": 10,
+          "balance": 100,
+          "timestamp": 1614351341387
+        },
+        {
+          "id": 2,
+          "type": "CREDIT",
+          "amount": 300,
+          "balance": 400,
+          "timestamp": 1614381341387
+        },
+        {
+          "id": 3,
+          "type": "DEBIT",
+          "amount": 100,
+          "balance": 300,
+          "timestamp": 1615391341387
+        }
+      ]
+    }
+  ]
+}

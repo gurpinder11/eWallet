@@ -1,23 +1,38 @@
-import logo from './logo.svg';
-import './App.css';
+import {useState} from "react";
+import "./App.css";
+import {browserHistory} from "react-router";
 
-function App() {
+function App({children}) {
+  const menuItems = [
+    {id: "allWallet", text: "All Wallets"},
+    {id: "newWallet", text: "New Wallet"},
+    {id: "checkBalance", text: "Check Balance"},
+    {id: "addFunds", text: "Add Funds"},
+    {id: "spendFunds", text: "Spend Funds"},
+    {id: "allTransactions", text: "All Transactions"},
+  ];
+
+  const [selectedItem, setSelectedItem] = useState(menuItems[0]);
+
+  const navTo = (selectedItem) => {
+    const route = selectedItem.id === "allWallet" ? "/" : `/${selectedItem.id}`;
+
+    setSelectedItem(selectedItem);
+    browserHistory.push(route);
+  };
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app-container">
+      <div className="app">
+        <div className="side-nav">
+          {menuItems.map((item) => (
+            <div onClick={() => navTo(item)}>{item.text}</div>
+          ))}
+        </div>
+        <div className="main">
+          <header className="app-header">{selectedItem.text}</header>
+          <div className="content">{children}</div>
+        </div>
+      </div>
     </div>
   );
 }
